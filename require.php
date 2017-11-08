@@ -1,4 +1,8 @@
 <?php
+ /**
+ * A required File for accessing the lib.
+ * @author @ronnelreposo
+ */
 	require_once 'lib/Core.php';
 	require_once 'lib/Const.php';
 	require_once 'lib/Tuple.php';
