@@ -1,1 +1,1 @@
-#PHP Func
+# Simple PHP Functional Utilities #
