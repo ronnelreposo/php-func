@@ -36,6 +36,11 @@
   final function isEmpty () : bool { return $this->_hd == null && $this->_tl == null; }
 	}
 
+ /**
+ * Represents a curried construction function for FList
+ * @param a':$x The head of the FList
+ * @return callable:f->$xs The function that accepts $xs as its tail for FList
+ */
 	$cons = function ($x) : callable {
 		return function (FList $xs) use ($x) : FList {
 			return FList::cons($x, $xs);
