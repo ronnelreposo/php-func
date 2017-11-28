@@ -1,16 +1,38 @@
 <?php
 	/**
 	* Represents an Immutable List.
-	* @author R R.
+	* @author ronnelreposo
 	*/
 	final class FList {
   private $_hd;
   private $_tl;
   private function __construct ($hd = null, FList $tl = null) { $this->_hd = $hd; $this->_tl = $tl; }
+  /**
+  * FList factory constructor
+  * @param $hd - 'a: The head of the list
+  * @param $tl - FList: The tail of the list
+  * @return new FList with $hd and $tl
+  */
   static final function cons ($hd, FList $tl) : FList { return new FList($hd, $tl); }
+  /**
+  * Creates an Enpty FList
+  * @return FList: new FList (empty)
+  */
   static final function empty () : FList { return new FList(null, null); }
+  /**
+  * Represents the head of Flist
+  * @return 'a: head of FList
+  */
   final function hd () { return $this->_hd; }
+  /**
+  * Represents the tail of the list
+  * @return FList: tail of FList
+  */
   final function tl () : FList { if ($this->_tl == null) { throw new Exception('Tail is empty.'); } return $this->_tl; }
+  /**
+  * Tests if this FList is empty
+  * @return bool: true if empty or else false
+  */
   final function isEmpty () : bool { return $this->_hd == null && $this->_tl == null; }
 	}
 
