@@ -171,6 +171,6 @@
   })(FList::empty()) ($projection);
  };
 
- $zip = $map2($tuple);
+ $pair = $map2($tuple);
 
 ?>
