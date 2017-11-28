@@ -47,6 +47,11 @@
 		};
 	};
 
+ /**
+ * Retrieves the head of FList
+ * @param FList:$xs The given FList
+ * @return a': The of the FList
+ */
 	$hd = function (FList $xs) { return $xs->hd(); };
 	$tl = function (FList $xs) { return $xs->tl(); };
 
