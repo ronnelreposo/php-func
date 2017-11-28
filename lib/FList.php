@@ -53,6 +53,12 @@
  * @return a': The of the FList
  */
 	$hd = function (FList $xs) { return $xs->hd(); };
+
+ /**
+ * Retrieves the tail of FList
+ * @param FList:$xs The given FList
+ * @return FList: The tail of the FList
+ */
 	$tl = function (FList $xs) { return $xs->tl(); };
 
 	$iter = function (callable $action) : callable {
