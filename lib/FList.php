@@ -85,6 +85,11 @@
  */
 	$single = function ($x) : FList { return FList::cons($x, FList::empty()); };
 
+ /**
+ * Creates a new list which is the reverse order of the given list
+ * @param FList:$xs The given list
+ * @return FList
+ */
 	$reverse = function (FList $xs) {
 		return ($f = function (FList $acc_xs) use (&$f) : callable {
 			return function (FList $xs) use (&$f, $acc_xs) : FList {
