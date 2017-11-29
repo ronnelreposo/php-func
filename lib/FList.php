@@ -101,6 +101,11 @@
 		})(FList::empty()) ($xs);
 	};
 
+ /**
+ * Projects each element of a list to a new form of list using a function ($projection)
+ * @param callable:$projection - The given function to project an element
+ * @return callable:f->$xs - function accepting list ($xs)
+ */
 	$map = function (callable $projection) use ($reverse) : callable {
 		return function (FList $xs) use ($projection, $reverse) : FList {
 			return ($f = function (callable $projection) use (&$f, $reverse) : callable {
