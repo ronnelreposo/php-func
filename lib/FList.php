@@ -211,6 +211,11 @@
   })($xs) (0);
 	};
 
+ /**
+ * Reduces the list by applying function ($reduction) in each element
+ * @param callable:$reduction - The function reduction
+ * @return callable:f->$xs - The function that accepts the list ($xs)
+ */
 	$reduce = function (callable $reduction) use ($foldl) : callable {
 		return function (FList $xs) use ($foldl, $reduction) {
 			if ($xs->isEmpty()) { throw new \Exception('Reducing a list requires a non-empty list.'); }
