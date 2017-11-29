@@ -223,6 +223,11 @@
 		};
 	};
 
+ /**
+ * Projects each element in list pairwise using function ($projection) into a new list
+ * @param callable:$projection - The function to project element pairwise
+ * @return FList
+ */
 	$map2 = function (callable $projection) use ($reverse): callable {
   return ($f = function (FList $acc_xs) use (&$f, $reverse) : callable {
    return function (callable $projection) use (&$f, $reverse, $acc_xs) : callable {
