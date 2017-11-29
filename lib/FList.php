@@ -186,6 +186,11 @@
 		};
 	};
 
+ /**
+ * Builds a new list with the elements from the first list contatentated with the elements in second list
+ * @param FList:$xs - The first list
+ * @return callable:f->$ys - The function that accepts the second list
+ */
 	$concat = function (FList $xs) use ($foldr, $cons) : callable {
 		return function (FList $ys) use ($foldr, $cons, $xs) : FList {
 			if ( $xs->isEmpty() && $ys->isEmpty() ) { return FList::empty(); }
