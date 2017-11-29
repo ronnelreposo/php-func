@@ -143,6 +143,11 @@
 		};
 	};
 
+ /**
+ * Builds an accumulator by applying the function (folder) through each element and the accumulator
+ * @param callable:$folder - The folder function
+ * @return callable:f->$xs->$init - The function accepting the list ($xs) and accumulator ($init)
+ */
 	$foldr = function (callable $folder) use ($reverse) : callable {
 		return function (FList $xs) use ($reverse, $folder) : callable {
 			return function ($init) use ($reverse, $folder, $xs) {
