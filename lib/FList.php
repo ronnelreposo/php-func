@@ -200,6 +200,11 @@
 		};
 	};
 
+ /**
+ * Returns a the length of the list
+ * @param Flist:$xs - The given list
+ * @return int
+ */
 	$length = function (FList $xs) use ($foldr) : int {
 		return $foldr(function ($_) : callable {
    return function ($a) : int { return $a + 1; }; 
