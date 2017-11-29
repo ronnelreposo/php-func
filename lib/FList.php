@@ -121,6 +121,11 @@
 		};
 	};
 
+ /**
+ * Builds a new list for each element matching the function $predicate
+ * @param callable:$predicate - The filter function
+ * @return callable:f->$xs - A function that accepts the list $xs
+ */
 	$filter = function (callable $predicate) use ($reverse) : callable {
 		return function (FList $xs) use ($predicate, $reverse) : FList {
 			return ($f = function (callable $predicate) use (&$f) : callable {
