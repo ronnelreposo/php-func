@@ -61,6 +61,11 @@
  */
 	$tl = function (FList $xs) { return $xs->tl(); };
 
+ /**
+ * Iterates through the list using action function
+ * @param callable:$action - The action function to be applied in each item
+ * @return callable:f->$xs - function accepting list ($xs)
+ */
 	$iter = function (callable $action) : callable {
 		return function (FList $xs) use ($action) {
 			return ($f = function (callable $action) use (&$f) {
