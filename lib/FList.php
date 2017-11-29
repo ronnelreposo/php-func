@@ -187,7 +187,7 @@
 	};
 
  /**
- * Builds a new list with the elements from the first list contatentated with the elements in second list
+ * Builds a new list with the elements from the first list concatenated with the elements in second list
  * @param FList:$xs - The first list
  * @return callable:f->$ys - The function that accepts the second list
  */
