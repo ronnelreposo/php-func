@@ -164,6 +164,12 @@
 		};
 	};
 
+ /**
+ * Builds an accumulator by applying the function (folder) through each element and the accumulator,
+ * starting from the right most element of the list to the left
+ * @param callable:$folder - The folder function
+ * @return callable:f->$init->$xs - The function accepting the accumulator ($init) and list ($xs)
+ */
 	$foldl = function (callable $folder) : callable {
 		return function ($init) use ($folder) : callable {
 			return function (FList $xs) use ($folder, $init) {
