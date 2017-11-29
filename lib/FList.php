@@ -78,6 +78,11 @@
 		};
 	};
 
+ /**
+ * Creates a list with a single item
+ * @param a':$x - The single item
+ * @return new FList with $x as its head
+ */
 	$single = function ($x) : FList { return FList::cons($x, FList::empty()); };
 
 	$reverse = function (FList $xs) {
