@@ -243,6 +243,10 @@
   })(FList::empty()) ($projection);
  };
 
+ /**
+ * Projects each element in list pairwise into a new tupled list
+ * @return FList->FList
+ */
  $pair = $map2($tuple);
 
 ?>
